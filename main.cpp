@@ -6,7 +6,7 @@ struct date {
   int month;
   int day;
 } bob;
-
+void print_date(date* pointer);
 
 
 int main() {
@@ -17,5 +17,15 @@ int main() {
 
   bob = &halloween;
 
+  cout << "halloween is on " << bob->month << "/" << bob->day <<"/"<<bob->year << endl;
+
+
+  print_date(bob);
+
+
   return 0;
+}
+
+void print_date(date* pointer){
+  cout << "halloween is on " << pointer->month << "/" << pointer->day << "/" <<pointer->year << endl; 
 }
